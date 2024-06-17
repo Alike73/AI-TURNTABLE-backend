@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
-const soundsRoutes = require('./vinyl-sounds-backend/SoundsRoutes');
-const adminRoutes = require('./admin-backend/AdminRoutes');
-const musicCategoryRoutes = require('./music-category-backend/MusicCategoryRoutes');
+const soundsRoutes = require('./SoundsRoutes');
+const adminRoutes = require('./AdminRoutes');
+const musicCategoryRoutes = require('./MusicCategoryRoutes');
 
 mongoose.set('strictQuery', false);
 require('dotenv').config();
@@ -28,7 +28,3 @@ app.use(musicCategoryRoutes)
 app.listen(PORT, () => {
     console.log(`Your server is running at PORT: ${PORT}!`)
 })
-
-// Username:  alimzhanislaAITurntable
-// Password:   zNSDm0TFTvUqK7Xk
-// Link:       mongodb+srv://alimzhanislaAITurntable:zNSDm0TFTvUqK7Xk@cluster0.89qcjep.mongodb.net/AITurntable?retryWrites=true&w=majority&appName=Cluster0
